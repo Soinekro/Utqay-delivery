@@ -5,9 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('welcome') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
-                    </a>
+                    <x-jet-nav-link class="w-16" href="{{ route('welcome') }}">
+                        <img src="{{asset('img/SVG/utqay.svg')}}" alt="">
+                    </x-jet-nav-link>
                 </div>
 
                 <!-- Navigation Links -->
