@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
+    protected $fillable = [
+        'celular'
+    ];
     use HasFactory;
 
     //relacion 1 a muchos
-    public function pedidos(){
+    public function pedidos()
+    {
         return $this->hasMany(Pedido::class);
     }
 }

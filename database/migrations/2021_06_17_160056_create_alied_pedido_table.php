@@ -17,8 +17,8 @@ class CreateAliedPedidoTable extends Migration
             $table->id();
             $table->unsignedBigInteger('alied_id');
             $table->unsignedBigInteger('pedido_id');
-            $table->foreign('alied_id')->references('id')->on('alieds')->onDelete('cascade');
-            $table->foreign('pedido_id')->references('id')->on('pedidos')->onDelete('cascade');
+            $table->foreign('alied_id')->references('id')->on('alieds')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('pedido_id')->references('id')->on('pedidos')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

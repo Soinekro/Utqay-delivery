@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $guarded =[
+        'id',
+        'created_at',
+        'updated_at',
+    ];
     use HasFactory;
 //relacion 1 a muchos inversa
     public function alied(){

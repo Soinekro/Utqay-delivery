@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Disctrict extends Model
 {
+    protected $fillable =[
+        'name',
+    ];
     use HasFactory;
 
 //relacion 1 a muchos

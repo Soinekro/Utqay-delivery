@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Motorizado extends Model
 {
+    protected $guarded =[
+        'id',
+        'created_at',
+        'updated_at',
+    ];
     use HasFactory;
 
 //relacion 1 a muchos inversa

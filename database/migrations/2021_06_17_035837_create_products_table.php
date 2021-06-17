@@ -17,9 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->smallInteger('stock');
             $table->unsignedBigInteger('alied_id');
-            $table->foreign('alied_id')->references('id')->on('alieds');
+            $table->foreign('alied_id')->references('id')->on('alieds')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
