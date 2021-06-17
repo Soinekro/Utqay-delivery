@@ -19,6 +19,8 @@ class CreateMotorizadosTable extends Migration
             $table->string('licencia')->unique();
             $table->unsignedBigInteger('user_id')->unique();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('disctrict_id')->nullable();
+            $table->foreign('disctrict_id')->references('id')->on('disctricts')->onDelete('set null');
             $table->timestamps();
         });
     }
