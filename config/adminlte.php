@@ -243,8 +243,9 @@ return [
         ],
         [
             'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'url'  => 'admin.index',
+            'can'  => 'admin.index',
+
         ],
         [
             'text'        => 'pages',

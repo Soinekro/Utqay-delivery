@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\TipoPago;
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\Storage;
+
 class ImageSeeder extends Seeder
 {
     /**
@@ -17,6 +19,9 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
+
+        Storage::deleteDirectory('imgs');
+        Storage::makeDirectory('imgs');
         $tipopagos=TipoPago::all();
         $motorizados=Motorizado::all();
         $products=Product::all();

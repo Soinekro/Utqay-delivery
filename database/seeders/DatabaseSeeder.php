@@ -17,9 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Storage::deleteDirectory('img');
-        Storage::makeDirectory('img');
-//$this->call(UserSeeder::class);
+        //$this->call(UserSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(DisctrictSeeder::class);
         $this->call(ClientSeeder::class);
