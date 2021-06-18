@@ -32,11 +32,12 @@ class PedidoSeeder extends Seeder
                 rand(16,20),
             ]);
         }
-        foreach ($pedidos as $pedido) {
+        /* foreach ($pedidos as $pedido) {
             $pedido->disctricts()->attach([
-                rand(1,2),
-                rand(2,3)
+                rand(1),
+                rand(2),
+                rand(3)
             ]);
-        }
+        } */
     }
 }

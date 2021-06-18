@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Alied;
 use App\Models\Client;
+use App\Models\Disctrict;
 use App\Models\Motorizado;
 use App\Models\Pedido;
 use App\Models\Product;
@@ -35,6 +36,7 @@ class PedidoFactory extends Factory
             'motorizado_id'=>Motorizado::all()->random()->id,
             'product_id'=>Product::all()->random()->id,
             'alied_id'=>Alied::all()->random()->id,
+            'disctrict_id'=>Disctrict::all()->random()->id,
             'tipo_pago_id'=>TipoPago::all()->random()->id,
         ];
     }

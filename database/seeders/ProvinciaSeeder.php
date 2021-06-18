@@ -24,7 +24,7 @@ class ProvinciaSeeder extends Seeder
             'disctrict_id'=>1,
         ]);
         Provincia::create([
-            'name'=>'Catacaos',
+            'name'=>'26 de Octubre',
             'disctrict_id'=>1,
         ]);
         //paita

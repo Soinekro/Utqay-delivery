@@ -34,6 +34,9 @@ class CreatePedidosTable extends Migration
             //llave foranea de tipo de pago
             $table->unsignedBigInteger('tipo_pago_id')->nullable();
             $table->foreign('tipo_pago_id')->references('id')->on('tipo_pagos')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedBigInteger('disctrict_id');
+            //foranea de distritos
+            $table->foreign('disctrict_id')->references('id')->on('disctricts')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

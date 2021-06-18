@@ -14,26 +14,31 @@ class Pedido extends Model
     ];
     use HasFactory;
 
-//relacion muchos a muchos
-    public function disctricts(){
-        return $this->belongsToMany(Disctrict::class);
-    }
-    public function products(){
+    //relacion muchos a muchos
+    public function products()
+    {
         return $this->belongsToMany(Product::class);
     }
-    public function alieds(){
+    public function alieds()
+    {
         return $this->belongsToMany(Alied::class);
     }
 
-//relacion uno a muchos inversa
-    public function motorizado(){
+    //relacion uno a muchos inversa
+    public function disctricts()
+    {
+        return $this->belongsTo(Disctrict::class);
+    }
+    public function motorizado()
+    {
         return $this->belongsTo(Motorizado::class);
     }
-    public function client(){
+    public function client()
+    {
         return $this->belongsTo(Client::class);
     }
-    public function tipoPago(){
+    public function tipoPago()
+    {
         return $this->belongsTo(TipoPago::class);
     }
-
 }

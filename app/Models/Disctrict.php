@@ -19,6 +19,6 @@ class Disctrict extends Model
 
 //relacion muchos a muchos
     public function pedidos(){
-        return $this->belongsToMany(Pedido::class);
+        return $this->hasMany(Pedido::class);
     }
 }
