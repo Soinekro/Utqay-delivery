@@ -19,7 +19,6 @@ class CreateTeamInvitationsTable extends Migration
             $table->string('email');
             $table->string('role')->nullable();
             $table->timestamps();
-
             $table->unique(['team_id', 'email']);
         });
     }

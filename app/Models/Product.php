@@ -21,4 +21,9 @@ class Product extends Model
     public function pedidos(){
         return $this->belongsToMany(Pedido::class);
     }
+
+//relacion 1 a 1 polimorfica
+    public function image(){
+        return $this->morphOne(image::class,'imageable');
+    }
 }

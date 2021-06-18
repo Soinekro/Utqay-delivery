@@ -23,4 +23,8 @@ class Motorizado extends Model
     public function pedidos(){
         return $this->hasMany(Pedido::class);
     }
+//relacion 1 a muchos polimorfica
+    public function image(){
+        return $this->morphOne(Image::class,'imageable');
+    }
 }

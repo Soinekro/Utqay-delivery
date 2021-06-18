@@ -6,6 +6,8 @@ use App\Models\Motorizado;
 use App\Models\Pedido;
 use Illuminate\Database\Seeder;
 
+use Illuminate\Support\Facades\Storage;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,6 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Storage::deleteDirectory('img');
+        Storage::makeDirectory('img');
 //$this->call(UserSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(DisctrictSeeder::class);
@@ -26,6 +30,6 @@ class DatabaseSeeder extends Seeder
         Motorizado::factory(10)->create();
         Pedido::factory(100)->create();
         $this->call(PedidoSeeder::class);
-        //\App\Models\Alied::factory(30)->create();
+        $this->call(ImageSeeder::class);
     }
 }

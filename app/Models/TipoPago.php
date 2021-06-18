@@ -15,4 +15,8 @@ class TipoPago extends Model
     public function pedidos(){
         return $this->hasMany(Pedido::class);
     }
+    //relacion 1 a muchos polimorfica
+    public function image(){
+        return $this->morphOne(image::class,'imageable');
+    }
 }
