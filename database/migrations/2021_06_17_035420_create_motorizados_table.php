@@ -15,8 +15,7 @@ class CreateMotorizadosTable extends Migration
     {
         Schema::create('motorizados', function (Blueprint $table) {
             $table->id();
-            $table->integer('celular')->unique();
-            $table->bigInteger('placa')->unique();
+            $table->string('placa')->unique();
             $table->string('licencia')->unique();
             $table->string('dni',8)->unique();
             $table->enum('status',[1,2])->default(1);

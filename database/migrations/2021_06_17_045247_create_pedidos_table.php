@@ -17,7 +17,7 @@ class CreatePedidosTable extends Migration
             $table->id();
             $table->tinyInteger('cantidad');
             $table->text('address');
-            $table->integer('monto');
+            $table->double('monto');
             $table->enum('status',[1,2,3])->default(1);
             //llave foranea de Cliente
             $table->unsignedBigInteger('client_id')->nullable();

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Client;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,6 @@ class UserSeeder extends Seeder
             'password'=>bcrypt('elder123'),
         ])->assignRole('Admin');
 
-        User::factory(9)->create();
+        $users=User::factory(350)->create();
     }
 }

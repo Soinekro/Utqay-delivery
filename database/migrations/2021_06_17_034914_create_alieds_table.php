@@ -17,9 +17,8 @@ class CreateAliedsTable extends Migration
             $table->id();
             $table->string('name',45);
             $table->string('person',60);
-            $table->integer('celular');
-            $table->unsignedBigInteger('client_id')->unique();
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('user_id')->unique();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
