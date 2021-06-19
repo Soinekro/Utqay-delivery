@@ -15,8 +15,10 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('cantidad');
+
             $table->text('address');
+            /* $table->Integer('cantidad')->nullable();
+            $table->integer('cant_pro'); */
             $table->double('monto');
             $table->enum('status',[1,2,3])->default(1);
             //llave foranea de Cliente
@@ -26,8 +28,8 @@ class CreatePedidosTable extends Migration
             $table->unsignedBigInteger('motorizado_id')->nullable();
             $table->foreign('motorizado_id')->references('id')->on('motorizados')->onDelete('set null')->onUpdate('cascade');
             //llave foranea de producto
-            $table->unsignedBigInteger('product_id')->nullable();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('set null')->onUpdate('cascade');
+            /* $table->unsignedBigInteger('product_id')->nullable();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('set null')->onUpdate('cascade'); */
             //llave foranea de aliado
             $table->unsignedBigInteger('alied_id')->nullable();
             $table->foreign('alied_id')->references('id')->on('alieds')->onDelete('set null')->onUpdate('cascade');

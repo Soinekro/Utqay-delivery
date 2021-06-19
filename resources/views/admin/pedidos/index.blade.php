@@ -8,14 +8,14 @@
             <thead>
                 <tr>
                     <td>ID</td>
-                    <td>Monto</td>
-                    <td>cantidad</td>
+                    <td>Monto</td>{{--
+                    <td>cantidad</td> --}}
                     <td>direccion</td>
                     <td>estado</td>
-                    <td>id Cliente</td>
+                    <td>Cliente</td>
                     <td>motorizado</td>
                     <td colspan="5">productos->aliado</td>
-                    <td>id tipo de pago</td>
+                    <td>tipo de pago</td>
                     <td colspan="2"></td>
                 </tr>
             </thead>
@@ -23,8 +23,8 @@
                 @foreach ($pedidos as $pedido)
                     <tr>
                         <td>{{$pedido->id}}</td>
-                        <td>{{$pedido->monto}}</td>
-                        <td>{{$pedido->cantidad}}</td>
+                        <td>{{$pedido->monto}}</td>{{--
+                        <td>{{$pedido->cantidad}}</td> --}}
                         <td>{{$pedido->address}}</td>
                         <td>{{$pedido->status}}</td>
                         <td>{{$pedido->client->user->name}}</td>

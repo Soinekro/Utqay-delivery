@@ -27,14 +27,15 @@ class PedidoFactory extends Factory
      */
     public function definition()
     {
+        $n=Pedido::all();
         return [
-            'cantidad'=>$this->faker->numberBetween(1,5),
+            /* 'cantidad'=>$this->faker->numberBetween(1,5), */
             'address'=>$this->faker->text(100),
             'monto'=>$this->faker->numberBetween(20.00,200.00),
             'status'=>$this->faker->randomElement([1,2,3]),
             'client_id'=>Client::all()->random()->id,
             'motorizado_id'=>Motorizado::all()->random()->id,
-            'product_id'=>Product::all()->random()->id,
+            /* 'cant_pro'=>$n->products()->cantidad, */
             'alied_id'=>Alied::all()->random()->id,
             'disctrict_id'=>Disctrict::all()->random()->id,
             'tipo_pago_id'=>TipoPago::all()->random()->id,
