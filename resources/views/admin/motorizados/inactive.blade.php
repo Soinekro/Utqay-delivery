@@ -3,7 +3,7 @@
 @section('title', 'Utqay')
 
 @section('content_header')
-    <a href="{{ route('admin.motorizados.create') }}" class="btn btn-warning float-right">Crear nuevo Rol</a>
+    <a href="{{ route('admin.motorizados.create') }}" class="btn btn-success float-right">exportar a Exccell</a>
     <h1>Utqay</h1>
 @stop
 

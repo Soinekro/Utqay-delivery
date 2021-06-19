@@ -32,9 +32,9 @@ class PedidoFactory extends Factory
             /* 'cantidad'=>$this->faker->numberBetween(1,5), */
             'address'=>$this->faker->text(100),
             'monto'=>$this->faker->numberBetween(20.00,200.00),
-            'status'=>$this->faker->randomElement([1,2,3]),
+            'status'=>$this->faker->randomElement([2,3]),
             'client_id'=>Client::all()->random()->id,
-            'motorizado_id'=>Motorizado::all()->random()->id,
+            'motorizado_id'=>$this->faker->randomElement([1,2,3,4,5,6,7,8,9,10]),
             /* 'cant_pro'=>$n->products()->cantidad, */
             /* 'alied_id'=>Alied::all()->random()->id, */
             'disctrict_id'=>Disctrict::all()->random()->id,

@@ -2,7 +2,7 @@
 @section('title', 'Utqay')
 
 @section('content_header')
-    <a href="{{ route('admin.motorizados.create') }}" class="btn btn-warning float-right">Crear nuevo Rol</a>
+    <a href="{{ route('admin.motorizados.create') }}" class="btn btn-success float-right">exportar a Exccell</a>
     <h1>Utqay</h1>
 @stop
 
@@ -25,6 +25,7 @@
                         <th></th>
                         <th>Estado</th>
                         <th>Distrito</th>
+                        <th>Pedidos Asignados</th>
                         <th >opciones
                         </th>
                     </tr>
@@ -41,6 +42,7 @@
                             <td>{{ $motorizado->estado }}</td>
                             <td>{{ $motorizado->status }}</td>
                             <td>{{ $motorizado->disctrict->name }}</td>
+                            <td>{{ $motorizado->pedidos->count() }}</td>
                             <td>
                                 <a href="{{ route('admin.alieds.edit', $motorizado) }}" class="btn btn-primary"> Modificar</a>
                             </td>

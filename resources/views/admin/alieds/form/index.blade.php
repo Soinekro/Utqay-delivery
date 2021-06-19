@@ -2,7 +2,7 @@
 @section('title', 'Utqay')
 
 @section('content_header')
-    <a href="{{ route('admin.roles.create') }}" class="btn btn-warning float-right">Crear nuevo Rol</a>
+    <a href="{{ route('admin.roles.create') }}" class="btn btn-success float-right">Importar a exccel</a>
     <h1>Utqay-Administrador</h1>
 @stop
 
@@ -22,6 +22,7 @@
                         <th>Encargado</th>
                         <th>Celular</th>
                         <th>Duenio </th>
+                        <th>Productos Vendidos</th>
                         <th colspan="2">
                         </th>
                     </tr>
@@ -35,6 +36,7 @@
                             <td>{{ $alied->person }}</td>
                             <td>{{ $alied->user->celular }}</td>
                             <td>{{ $alied->user->name }}</td>
+                            <td>{{$alied->products->count()}}</td>
                             <td width="10px">
                                 <a href="{{ route('admin.alieds.edit', $alied) }}" class="btn btn-primary"> Modificar</a>
                             </td>

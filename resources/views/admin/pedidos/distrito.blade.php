@@ -2,7 +2,8 @@
 @section('title', 'Utqay-Administrador')
 
 @section('content_header')
-aea
+<a href="{{ route('admin.roles.create') }}" class="btn btn-success float-right">exportar a Exccell</a>
+    <h1>Utqay-Administrador</h1>
 @endsection
 
 @section('content')

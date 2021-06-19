@@ -2,7 +2,8 @@
 @section('title' , 'Utqay-Administrador')
 
 @section('content_header')
-
+<a href="{{ route('admin.roles.create') }}" class="btn btn-success float-right">exportar a Exccell</a>
+    <h1>Utqay-Administrador</h1>
 @endsection
 
 @section('content')
@@ -22,7 +23,6 @@
                         <td>Cliente</td>
                         <td>motorizado</td>
                         <td>distrito</td>
-                        <td>producto</td>
                         <td>tipo de pago</td>
                         <td colspan="2"></td>
                     </tr>
@@ -36,7 +36,11 @@
                         <td>{{ $pedido->address }}</td>
                         <td>{{ $pedido->status }}</td>
                         <td>{{ $pedido->client->user->name }}</td>
-                        <td>{{ $pedido->motorizado->user->name }}</td>
+                        @if ($pedido->motorizado_id  !=null)
+                        <td>{{$pedido->motorizado->user->name}}</td>
+                        @else
+                        <td>sin asignar</td>
+                        @endif
                         <td>{{ $pedido->disctrict->name }}</td>
                         <td>{{ $pedido->tipopago->name }}</td>
                         <td>

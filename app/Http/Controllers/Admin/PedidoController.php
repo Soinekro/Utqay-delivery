@@ -48,5 +48,10 @@ class PedidoController extends Controller
         ->paginate(5);
         return view('admin.pedidos.distrito',compact('pedidos'));
     }
-
+    public function export()
+    {   $pedidos= Pedido::where('disctrict_id',3)
+        ->where('status',3)
+        ->paginate(5);
+        return view('admin.pedidos.distrito',compact('pedidos'));
+    }
 }

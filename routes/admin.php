@@ -21,3 +21,5 @@ Route::get('pedidos/espera', [PedidoController::class,'espera'])->name('admin.pe
 Route::get('pedidos/piura', [PedidoController::class,'piura'])->name('admin.pedidos.piura');
 Route::get('pedidos/paita', [PedidoController::class,'paita'])->name('admin.pedidos.paita');
 Route::get('pedidos/sullana', [PedidoController::class,'sullana'])->name('admin.pedidos.sullana');
+//exportador a excell
+Route::get('pedidos/export', [PedidoController::class,'export'])->name('admin.pedidos.export');
