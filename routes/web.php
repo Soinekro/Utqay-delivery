@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('products',[ProductController::class,'index'])->name('products.index');
+Route::get('products',[ProductController::class,'index'])->name('products.index');

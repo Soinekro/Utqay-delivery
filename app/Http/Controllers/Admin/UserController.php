@@ -9,12 +9,12 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
-    public function __construct()
+   /*  public function __construct()
     {
         $this->middleware('can:admin.users.index')->only('index');
         $this->middleware('can:admin.users.create')->only('create', 'store');
         $this->middleware('can:admin.users.edit')->only('update','edit');
-    }
+    } */
     public function index()
     {
         return view('admin.users.index');

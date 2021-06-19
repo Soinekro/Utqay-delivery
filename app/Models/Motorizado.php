@@ -27,4 +27,9 @@ class Motorizado extends Model
     public function image(){
         return $this->morphOne(Image::class,'imageable');
     }
+    //relacion 1 a 1
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

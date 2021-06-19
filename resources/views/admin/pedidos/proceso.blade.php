@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    @include('admin.pedidos.index')
+@include('admin.pedidos.index')
 @endsection
 
 @section('css')

@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => '<b>Utqay</b>DELIVERY',
+    'logo_img' => 'img/SVG/utqay.svg',
+    'logo_img_class' => 'brand-image img-circle elevation-3 bg-primary',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'Utqay',
 
     /*
     |--------------------------------------------------------------------------
@@ -194,7 +194,7 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => 'profile.show',
 
     /*
     |--------------------------------------------------------------------------
@@ -242,83 +242,63 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin.index',
-            'can'  => 'admin.index',
-
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'text'        => 'Pedidos',
+            'route'         => 'admin.index',
+            'icon'        => 'fas fa-shopping-bag',
+            'active'       => ['admin.index'],
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Ajustes de Cuentas'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Usuarios',
+            'route'  => 'admin.users.index',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Socios',
+            'route'  => 'admin.alieds.index',
+            'icon' => 'fas fa-people-arrows',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Motorizados',
+            'icon'    => 'fas fa-motorcycle',
+
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Todos',
+                    'icon'    => 'fas fa-globe-americas',
+                    'route'  => 'admin.motorizados.index',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Disponibles',
+                    'icon'    => 'fas fa-check',
+                    'route'  => 'admin.motorizados.inactive',
                 ],
+
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Ocupados',
+                    'icon'    => 'far fa-times-circle',
+                    'route'  => 'admin.motorizados.active',
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'Ventas'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
+            'text'       => 'Ventas Concluidas',
             'icon_color' => 'cyan',
-            'url'        => '#',
+            'route'  => 'admin.pedidos.concluidos',
         ],
+        [
+            'text'       => 'Ventas en Proceso',
+            'icon_color' => 'blue',
+            'route'  => 'admin.pedidos.proceso',
+        ],
+        [
+            'text'       => 'Ventas sin Asignacion',
+            'icon_color' => 'red',
+            'route'  => 'admin.pedidos.espera',
+        ],
+
     ],
 
     /*

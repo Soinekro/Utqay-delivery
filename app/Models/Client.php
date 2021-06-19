@@ -19,4 +19,13 @@ class Client extends Model
     {
         return $this->hasMany(Pedido::class);
     }
+    //relacion 1 a 1
+    public function celular()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
 }

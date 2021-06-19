@@ -20,4 +20,9 @@ class Alied extends Model
     public function pedidos(){
         return $this->belongsToMany(Pedido::class);
     }
+    //relacion 1 a 1
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
 }

@@ -31,7 +31,7 @@ class Pedido extends Model
     }
     public function motorizado()
     {
-        return $this->belongsTo(Motorizado::class);
+        return $this->belongsTo(Motorizado::class,);
     }
     public function client()
     {
@@ -40,5 +40,9 @@ class Pedido extends Model
     public function tipoPago()
     {
         return $this->belongsTo(TipoPago::class);
+    }
+    public function user()
+    {
+        return $this->hasMany(User::class);
     }
 }

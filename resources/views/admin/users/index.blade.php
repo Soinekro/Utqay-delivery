@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    @include('admin.pedidos.index')
+    @livewire('admin.users-index')
 @endsection
 
 @section('css')
