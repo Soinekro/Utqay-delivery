@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Product::factory(50)->create();
         Motorizado::factory(10)->create();
-        Pedido::factory(100)->create();
+        Pedido::factory(400)->create();
         $this->call(PedidoSeeder::class);
         $this->call(ImageSeeder::class);
     }

@@ -36,7 +36,7 @@ class PedidoFactory extends Factory
             'client_id'=>Client::all()->random()->id,
             'motorizado_id'=>Motorizado::all()->random()->id,
             /* 'cant_pro'=>$n->products()->cantidad, */
-            'alied_id'=>Alied::all()->random()->id,
+            /* 'alied_id'=>Alied::all()->random()->id, */
             'disctrict_id'=>Disctrict::all()->random()->id,
             'tipo_pago_id'=>TipoPago::all()->random()->id,
         ];

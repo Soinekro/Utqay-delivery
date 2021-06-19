@@ -243,7 +243,7 @@ return [
         ],
         [
             'text'        => 'Pedidos',
-            'route'         => 'admin.index',
+            'route'         => 'admin.pedidos.index',
             'icon'        => 'fas fa-shopping-bag',
             'active'       => ['admin.index'],
             'label_color' => 'success',
@@ -298,8 +298,31 @@ return [
             'icon_color' => 'red',
             'route'  => 'admin.pedidos.espera',
         ],
+        [
+            'text' => 'ventas por Distrito',
+            'icon'    => 'fas fa-map-marked',
 
+            'submenu' => [
+                [
+                    'text' => 'Piura',
+                    'icon'    => 'fas fa-hat-cowboy',
+                    'route'  => 'admin.pedidos.piura',
+                ],
+                [
+                    'text' => 'Paita',
+                    'icon'    => 'fas fa-fish',
+                    'route'  => 'admin.pedidos.paita',
+                ],
+
+                [
+                    'text' => 'Sullana',
+                    'icon'    => 'fas fa-chess-pawn',
+                    'route'  => 'admin.pedidos.sullana',
+                ],
+            ],
+        ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

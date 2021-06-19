@@ -21,4 +21,7 @@ class Disctrict extends Model
     public function pedidos(){
         return $this->hasMany(Pedido::class);
     }
+    public function provincia(){
+        return $this->hasMany(Provincia::class);
+    }
 }

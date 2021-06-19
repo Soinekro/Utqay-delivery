@@ -31,8 +31,8 @@ class CreatePedidosTable extends Migration
             /* $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('set null')->onUpdate('cascade'); */
             //llave foranea de aliado
-            $table->unsignedBigInteger('alied_id')->nullable();
-            $table->foreign('alied_id')->references('id')->on('alieds')->onDelete('set null')->onUpdate('cascade');
+            /* $table->unsignedBigInteger('alied_id')->nullable();
+            $table->foreign('alied_id')->references('id')->on('alieds')->onDelete('set null')->onUpdate('cascade'); */
             //llave foranea de tipo de pago
             $table->unsignedBigInteger('tipo_pago_id')->nullable();
             $table->foreign('tipo_pago_id')->references('id')->on('tipo_pagos')->onDelete('set null')->onUpdate('cascade');

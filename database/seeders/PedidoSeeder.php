@@ -18,7 +18,7 @@ class PedidoSeeder extends Seeder
         $pedidos = Pedido::all();
         foreach ($pedidos as $pedido) {
             $pedido->products()->attach([
-                rand(rand(1,5),rand(5,10)),
+                rand(1,10),
                 rand(11, 20),
                 rand(21, 30),
                 rand(31, 40),

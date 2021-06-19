@@ -104,7 +104,7 @@
                             </x-jet-dropdown-link>
 
                             {{-- @can('admin.index') --}}
-                            <x-jet-dropdown-link href="{{ route('admin.index') }}">
+                            <x-jet-dropdown-link href="{{ route('admin.pedidos.index') }}">
                                 {{ __('Dashboard') }}
                             </x-jet-dropdown-link>
                             {{-- @endcan --}}

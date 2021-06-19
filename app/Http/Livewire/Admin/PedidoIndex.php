@@ -15,7 +15,7 @@ class PedidoIndex extends Component
     }
     public function render()
     {
-        $pedidos=Pedido::where('address' , 'LIKE', '%'.$this->search.'%')->paginate(5);
+        $pedidos=Pedido::paginate(5);
         return view('livewire.admin.pedido-index',compact('pedidos'));
     }
 }

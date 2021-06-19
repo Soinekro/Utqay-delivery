@@ -25,7 +25,7 @@ class Pedido extends Model
     }
 
     //relacion uno a muchos inversa
-    public function disctricts()
+    public function disctrict()
     {
         return $this->belongsTo(Disctrict::class);
     }

@@ -8,15 +8,9 @@ use Illuminate\Http\Request;
 use Livewire\WithPagination;
 
 class IndexController extends Controller
-{
-    protected $paginationTheme = 'bootstrap';
-    use WithPagination;
-    public $search;
-    public function updatingSearch(){
-        $this->resetPage();
-    }
+{   protected $paginationTheme = 'bootstrap';
     public function index(){
-        $pedidos=Pedido::where('address','LIKE','%'.$this->search.'%')->paginate(5);
-        return view('admin.index', compact('pedidos'));
+        $pedidos=Pedido::paginate(8);
+        return view('admin.pedidos.index', compact('pedidos'));
     }
 }
