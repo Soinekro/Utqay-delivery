@@ -25,8 +25,9 @@
     <x-jet-banner />
 
     <div class="min-h-screen bg-gray-300">
-        @include('navigation-menu')
-
+        {{-- <div class="fixed top-0 inset-x-0 bg-blue-900 flex text-sm uppercase font-mono"> --}}
+            @include('navigation-menu')
+{{--         </div> --}}
         <!-- Page Heading -->
         @if (isset($header))
             <header class="bg-gray-100 shadow">
@@ -37,7 +38,7 @@
         @endif
 
         <!-- Page Content -->
-        <main>
+        <main class=" py-16">
             {{ $slot }}
         </main>
     </div>
