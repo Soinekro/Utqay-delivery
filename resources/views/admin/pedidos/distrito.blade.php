@@ -2,7 +2,7 @@
 @section('title', 'Utqay-Administrador')
 
 @section('content_header')
-<a href="{{ route('admin.roles.create') }}" class="btn btn-success float-right">exportar a Exccell</a>
+    <a href="{{ route('admin.pedidos.export') }}" class="btn btn-success float-right">exportar a Exccell</a>
     <h1>Utqay-Administrador</h1>
 @endsection
 
@@ -33,8 +33,7 @@
                         <tr>
                             <td>{{ $pedido->id }}</td>
                             <td>{{ $pedido->monto }}</td>{{-- <td>{{$pedido->cantidad}}</td> --}}
-                            <td>{{ $pedido->address }}</td>{{--
-                            <td>{{ $pedido->provincia}}</td> --}}
+                            <td>{{ $pedido->address }}</td>{{-- <td>{{ $pedido->provincia}}</td> --}}
                             <td>{{ $pedido->client->user->name }}</td>
                             <td>{{ $pedido->motorizado->user->name }}</td>
                             <td>{{ $pedido->disctrict->name }}</td>
@@ -60,14 +59,14 @@
             </div>
         </div>
     </div>
-    @endsection
+@endsection
 
-    @section('css')
+@section('css')
 
-    @endsection
-    @section('js')
-        <script>
-            console.log('Hi!');
+@endsection
+@section('js')
+    <script>
+        console.log('Hi!');
 
-        </script>
-    @endsection
+    </script>
+@endsection

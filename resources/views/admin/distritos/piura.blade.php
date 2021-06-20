@@ -1,16 +1,16 @@
 @extends('adminlte::page')
-@section('title', 'Utqay-Administrador')
+@section('title' , 'Utqay-Administrador')
 
 @section('content_header')
-    <a href="{{ route('admin.pedidos.export') }}" class="btn btn-success float-right">exportar a Exccell</a>
+<a href="{{ route('admin.pedidos.export.piura') }}" class="btn btn-success float-right">exportar a Exccell</a>
     <h1>Utqay-Administrador</h1>
 @endsection
 
 @section('content')
-    <div class="card">
-        <div class="card-header">
-            <input wire:model="search" class="form-control" type="text" placeholder="Ingrese la direccion de un pedido">
-        </div>
+<div class="card">
+    <div class="card-header">
+        <input wire:model="search" class="form-control" type="text" placeholder="Ingrese la direccion de un pedido">
+    </div>
 
         <div class="card-body">
             <table class="table table-striped table-bordered text-dark ">
@@ -36,10 +36,10 @@
                         <td>{{ $pedido->address }}</td>
                         <td>{{ $pedido->status }}</td>
                         <td>{{ $pedido->client->user->name }}</td>
-                        @if ($pedido->motorizado_id != null)
-                            <td>{{ $pedido->motorizado->user->name }}</td>
+                        @if ($pedido->motorizado_id  !=null)
+                        <td>{{$pedido->motorizado->user->name}}</td>
                         @else
-                            <td>sin asignar</td>
+                        <td>sin asignar</td>
                         @endif
                         <td>{{ $pedido->disctrict->name }}</td>
                         <td>{{ $pedido->tipopago->name }}</td>
@@ -54,22 +54,19 @@
                         </td>
                         </form>
                     </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-        <div class="card-footer">
-            {{ $pedidos->links() }}
-        </div>
+    @endforeach
+    </tbody>
+    </table>
+</div>
+<div class="card-footer">
+    {{ $pedidos->links() }}
+</div>
 
-    @endsection
+@endsection
 
-    @section('css')
+@section('css')
 
-    @endsection
-    @section('js')
-        <script>
-            console.log('Hi!');
-
-        </script>
-    @endsection
+@endsection
+@section('js')
+<script> console.log('Hi!'); </script>
+@endsection

@@ -306,18 +306,18 @@ return [
                 [
                     'text' => 'Piura',
                     'icon'    => 'fas fa-hat-cowboy',
-                    'route'  => 'admin.pedidos.piura',
+                    'route'  => 'admin.distritos.piura',
                 ],
                 [
                     'text' => 'Paita',
                     'icon'    => 'fas fa-fish',
-                    'route'  => 'admin.pedidos.paita',
+                    'route'  => 'admin.distritos.paita',
                 ],
 
                 [
                     'text' => 'Sullana',
                     'icon'    => 'fas fa-chess-pawn',
-                    'route'  => 'admin.pedidos.sullana',
+                    'route'  => 'admin.distritos.sullana',
                 ],
             ],
         ],

@@ -2,7 +2,7 @@
 @section('title', 'Utqay')
 
 @section('content_header')
-    <a href="{{ route('admin.roles.create') }}" class="btn btn-success float-right">Importar a exccel</a>
+    <a href="{{ route('admin.pedidos.export') }}" class="btn btn-success float-right">Importar a exccel</a>
     <h1>Utqay-Administrador</h1>
 @stop
 
@@ -22,7 +22,7 @@
                         <th>Encargado</th>
                         <th>Celular</th>
                         <th>Duenio </th>
-                        <th>Productos Vendidos</th>
+                        <th>Productos afiliados</th>
                         <th colspan="2">
                         </th>
                     </tr>
