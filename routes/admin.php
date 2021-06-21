@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\PedidoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
-
+Route::get('dashboard', [PedidoController::class, 'dashboard'])/* ->middleware('can:admin.index') */->name('admin.pedidos.dashboard');
 Route::get('pedidos', [PedidoController::class, 'index'])/* ->middleware('can:admin.index') */->name('admin.pedidos.index');
 Route::resource('users', UserController::class)/* ->only(['index','edit','update']) */->names('admin.users');
 Route::resource('alieds', AliedController::class)/* ->only(['index','edit','update']) */->names('admin.alieds');

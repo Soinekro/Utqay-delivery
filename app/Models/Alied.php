@@ -12,6 +12,7 @@ class Alied extends Model
     'updated_at',
 ];
     use HasFactory;
+
     //relacion 1 a muchos
     public function products(){
         return $this->hasMany(Product::class);

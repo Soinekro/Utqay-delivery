@@ -20,6 +20,10 @@ class PedidoController extends Controller
         $this->middleware('can:admin.users.create')->only('create', 'store');
         $this->middleware('can:admin.users.edit')->only('update','edit'); */
     }
+    public function dashboard()
+    {
+        return view('admin.pedidos.dashboard');
+    }
     public function index()
     {   $pedidos= Pedido::paginate(5);
         return view('admin.pedidos.index',compact('pedidos'));

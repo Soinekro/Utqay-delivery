@@ -27,7 +27,6 @@ class ClientSeeder extends Seeder
 
         $users = User::factory(200)->create();
         foreach ($users as $user) {
-
                 Client::factory(1)->create([
                     'user_id' => $user->id,
                     'disctrict_id'=>Disctrict::all()->random()->id
